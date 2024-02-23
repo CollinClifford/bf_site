@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtered Data</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Report Number</th>
+            <th>Classification</th>
+            <th>State</th>
+            <th>Summary</th>
+            <!-- <th>Month Number</th> -->
+            <th>Submitted By</th>
+            <th>Year</th>
+            <th>Season</th>
+            <th>Month</th>
+            <th>Day</th>
+            <th>County</th>
+            <th>Location Details</th>
+            <th>Nearest Town</th>
+            <th>Nearest Road</th>
+            <th>Observed</th>
+            <th>Also Noticed</th>
+            <th>Other Witnesses</th>
+            <th>Environment</th>
+            <th>Other Stories</th>
+            <th>Time and Conditions</th>
+            <th>Follow Up</th>
+            <th>Follow Up Details</th>
+            <!-- <th>Day of Week</th> -->
+            <th>Date</th>
+            <th>Submitted By Date</th>
+        </tr>
+        {% for row in data %}
+            <tr>
+                <td>{{ row.report_number }}</td>
+                <td>{{ row.report_classification }}</td>
+                <td>{{ row.state }}</td>
+                <td>{{ row.summary }}</td>
+                <!-- <td>{{ row.month_number }}</td> -->
+                <td>{{ row.submitted_by }}</td>
+                <td>{{ row.year }}</td>
+                <td>{{ row.season }}</td>
+                <td>{{ row.month }}</td>
+                <td>{{ row.day }}</td>
+                <td>{{ row.county }}</td>
+                <td>{{ row.location_details }}</td>
+                <td>{{ row.nearest_town }}</td>
+                <td>{{ row.nearest_road }}</td>
+                <td>{{ row.observed }}</td>
+                <td>{{ row.also_noticed }}</td>
+                <td>{{ row.other_witnesses }}</td>
+                <td>{{ row.environment }}</td>
+                <td>{{ row.other_stories }}</td>
+                <td>{{ row.time_and_conditions }}</td>
+                <td>{{ row.follow_up }}</td>
+                <td>{{ row.follow_up_details }}</td>
+                <!-- <td>{{ row.day_of_week }}</td> -->
+                <td>{{ row.date }}</td>
+                <td>{{ row.submitted_by_date }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    
+</body>
+</html>
